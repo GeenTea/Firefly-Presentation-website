@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Tahoma";
+    src: url('./font/tahoma.ttf') format("truetype");
+    font-weight: 400 700;
+    font-style:normal;
+    font-display: swap;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    @apply bg-[#0d1629] text-white;
+    font-family: "TahomaCustom", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
