@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AnimatedBackground from '../assets/BackgroundAnimation/backgroundAnimation';
 import Header from '../components/header/header';
 import MoveUpAnimationImg from '../assets/MoveUpAnimation/moveupanimation';
+import InfiniteCarousel from '../assets/Infinite Carousel/infiniteCarousel';
 
 const Home: React.FC = () => {
     const [moved, setMoved] = useState(false);
@@ -28,11 +29,11 @@ const Home: React.FC = () => {
             {/*Galary sector*/}
 
             <div>
-                <h1 className='text-[5rem] text-center'>GALARY</h1>
+                <h1 className='text-[5rem] text-center !mb-10'>GALARY</h1>
             </div>
 
             <div>
-                
+                <InfiniteCarousel />
             </div>
         </>
     );
