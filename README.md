@@ -2,7 +2,7 @@
 
 This project just presentate a character for Honkai Star Rail
 
-##⛔This web site dont support mobile resolution⛔##
+### ⛔This web site dont support mobile resolution⛔
 
 ![Demostration.gif](./ReadmeScreen/Demostration.gif)
 
