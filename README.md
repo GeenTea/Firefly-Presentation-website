@@ -4,7 +4,7 @@ This project just presentate a character for Honkai Star Rail
 
 ##⛔This web site dont support mobile resolution⛔##
 
-![Firefly-Website/ReadmeScreen/Demostration.gif](./ReadmeScreen/Demostration.gif)
+![Demostration.gif](./ReadmeScreen/Demostration.gif)
 
 ## Libraries and Frameworks Used
 
