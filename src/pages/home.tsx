@@ -3,18 +3,31 @@ import AnimatedBackground from '../assets/BackgroundAnimation/backgroundAnimatio
 import Header from '../components/header/header';
 import MoveUpAnimationImg from '../assets/MoveUpAnimation/moveupanimation';
 import InfiniteCarousel from '../assets/Infinite Carousel/infiniteCarousel';
+import OpenCardAnimation from '../assets/OpenCardAnimation/opencardanimation';
+
 
 const Home: React.FC = () => {
     const [moved, setMoved] = useState(false);
+    const [weight, setWeight] = useState(300);
 
     useEffect(() => {
         const timer = setTimeout(() => setMoved(true), 100);
         return () => clearTimeout(timer);
     }, []);
 
+    const handleClick = () => {
+
+        if (weight === 300) {
+            setWeight(900);
+        } else {
+            setWeight(300);
+        }
+    }
+
     return(
         <>
             <Header />
+            <div id='home'></div>
             <AnimatedBackground backgroundImage='/backgroundWelcome.png' />
             <div className='!mt-[20vh] pointer-events-none select-none relative flex justify-center'>
                 <MoveUpAnimationImg imageSrc='/Firefly-Splash-.png' />
@@ -25,16 +38,31 @@ const Home: React.FC = () => {
                 <h1 className='text-[55px] '>Firefly</h1>
                 <p className='w-[28rem] text-[23px]'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia rem adipisci reprehenderit! Error repellendus harum ducimus fugiat quaerat explicabo eveniet.</p>
             </div>
+            {/*End text for character sector*/}
 
             {/*Galary sector*/}
-
             <div>
-                <h1 className='text-[5rem] text-center !mb-10'>GALARY</h1>
+                <h1 className='text-[5rem] text-center !mb-10' id='galary'>GALARY</h1>
             </div>
 
             <div>
                 <InfiniteCarousel />
             </div>
+            {/*End galary sector*/}
+
+            {/*Start about sector*/}
+            <div>
+                <div>
+                    <h1 className='text-[5rem] text-center !mb-10 !mt-30' id='about'>ABOUT</h1>
+                </div>
+
+                <div className={`!mb-40 !mt-20 !ml-auto !mr-auto w-[${weight}px] duration-700`}>
+                    <div onClick={handleClick}>
+                        <OpenCardAnimation />
+                    </div>
+                </div>
+            </div>
+            {/*End about sector*/}
         </>
     );
 }

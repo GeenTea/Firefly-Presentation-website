@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: "Tahoma";
+    font-family: "TahomaCustom";
     src: url('./font/tahoma.ttf') format("truetype");
     font-weight: 400 700;
     font-style:normal;
