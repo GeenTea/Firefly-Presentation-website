@@ -8,20 +8,15 @@ import OpenCardAnimation from '../assets/OpenCardAnimation/opencardanimation';
 
 const Home: React.FC = () => {
     const [moved, setMoved] = useState(false);
-    const [weight, setWeight] = useState(300);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => setMoved(true), 100);
         return () => clearTimeout(timer);
     }, []);
 
-    const handleClick = () => {
-
-        if (weight === 300) {
-            setWeight(900);
-        } else {
-            setWeight(300);
-        }
+    const handleOpenChange = (open: boolean) => {
+        setIsOpen(!open);
     }
 
     return(
@@ -56,8 +51,8 @@ const Home: React.FC = () => {
                     <h1 className='text-[5rem] text-center !mb-10 !mt-30' id='about'>ABOUT</h1>
                 </div>
 
-                <div className={`!mb-40 !mt-20 !ml-auto !mr-auto w-[${weight}px] duration-700`}>
-                    <div onClick={handleClick}>
+                <div className={`!mb-40 !mt-20 !ml-auto !mr-auto duration-700 ${isOpen ? 'w-[900px]' : 'w-[300px]'}`}>
+                    <div onClick={() => handleOpenChange(isOpen)}>
                         <OpenCardAnimation />
                     </div>
                 </div>
