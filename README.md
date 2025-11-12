@@ -1,6 +1,6 @@
 ## Firefly-Presentation
 
-This project just presentate a character for Honkai Star Rail
+This project just presents a character for Honkai: Star Rail.
 
 ### ⛔This web site dont support mobile resolution⛔
 
